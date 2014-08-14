@@ -11,12 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140812155341) do
+ActiveRecord::Schema.define(version: 20140813150719) do
 
   create_table "games", force: true do |t|
     t.datetime "scheduled_start_time"
     t.datetime "start_time"
     t.datetime "end_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "team_id"
+    t.integer  "team2_id"
+  end
+
+  add_index "games", ["team2_id"], name: "index_games_on_team2_id"
+  add_index "games", ["team_id"], name: "index_games_on_team_id"
+
+  create_table "teams", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -2,8 +2,53 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //
+
+$blue:  #00FFFF;
+$red: #FF0000;
+
 .site-wrapper-inner {
 	margin-top: 100px;
 }
 
+.game-list {
+  list-style:none;
+}
+
+.game-list li {
+  margin: 30px;
+  padding: 10px;
+
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  -moz-transition-duration: 500ms;
+
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+.game-list li:hover {
+  background-color:#222;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  -moz-transition-duration: 500ms;
+
+
+}
+
 .white { color: #FFF; }
+.home { color: $red; }
+.visitor { color: $blue; }
+.vs { color: #CCC; }
+.date { text-decoration: underline; }
+
+.heading-home { color: $red; }
+.heading-visitor { color: $blue; }
+.game-heading span.vs { font-size: 30px; margin: 30px; }
+
+.game-heading span { font-size: 60px; }
+
+.game-stats table thead tr th { font-size: 40px; font-weight: 100; padding:20px; }
+.game-stats table tbody tr { text-align:right; }
+.game-stats table tbody tr.head { text-align: left; font-weight:100; font-size: 20px; }
+.game-stats table tbody tr td { padding: 10px; min-width: 250px; border:solid 1px #CCC; }
