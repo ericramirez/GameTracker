@@ -4,7 +4,8 @@ class GameTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
-
+  #
+  
 	test "Valid Game Data" do
 		
 		scheduled_start_time = DateTime.new(2014, 8, 12, 13, 0, 0)
@@ -27,6 +28,14 @@ class GameTest < ActiveSupport::TestCase
 		game1.end_time = incorrect_end_time
 
 		assert_not game1.save, "Could save a game that finished before it started"
+
+    plays = game1.plays
+
+    # Asegura que el metodo plays devuelva un resultado de un query
+    assert plays.class == Play::ActiveRecord_Relation, "El resultado de game1.plays devuelve un arreglo que no es de jugadas"
+
+
+
 
 		
 	end
