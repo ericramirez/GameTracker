@@ -1,28 +1,26 @@
-== README
+== TODO LIST
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+En este documento se encontraran las tareas que cada uno tiene que realizar para la aplicacion.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Luis Del Giudice
+
+** realizar tests del modelo Game, Team y Play que representan ( Juegos, Equipo y Jugadas respectivamente )
+
+* Hector Mortero
+
+** Modificar la clase Play y Team en base a los test que esten escritos de la misma. Para correr tests pueden usar <tt>rake test</tt>
+
+* Eric Ramirez
+
+** Modificar la clase Game para que cumpla con los test escritos
+
+== Notas
+
+* Las clases/modelos estan ubicados en la carpeta app/models
+
+* Con la intencion de experimentar el Test Driven Development ( Desarrollo orientado a pruebas ) ( o creo que asi se traduce :P ) no se puede escribir ningun codigo que no sea para que un test pase, me explico:
+
+Si hay alguna funcion necesaria de la clase por ejemplo Game, pero aun no se ha escrito ninguna prueba, la persona a la que le toque desarrollar ese feature debe esperar a la persona encargada de escribir los tests
+
+* Alguna duda, confucion o cualquier cosa lo discutimos despues de clases
