@@ -6,7 +6,7 @@ class Game < ActiveRecord::Base
 	validates :team2, presence: true
 
 	belongs_to :team1, foreign_key: 'team_id', class_name: 'Team'
-	belongs_to :team2, foreign_key: 'team_id', class_name: 'Team'
+	belongs_to :team2, foreign_key: 'team2_id', class_name: 'Team'
 
 	def plays
 		#Falta la implementacion
