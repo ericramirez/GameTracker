@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20140816190903) do
   end
 
   add_index "games", ["team2_id"], name: "index_games_on_team2_id"
-  add_index "games", ["team_id"], name: "index_games_on_team_id"
+  add_index "games", ["team1_id"], name: "index_games_on_team_id"
 
   create_table "plays", force: true do |t|
     t.datetime "created_at"
