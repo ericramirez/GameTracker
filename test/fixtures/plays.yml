@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  player_id: 1
+  score: MyString
+  time: 2014-08-23 18:49:18
+
+two:
+  description: MyString
+  player_id: 1
+  score: MyString
+  time: 2014-08-23 18:49:18
