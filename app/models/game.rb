@@ -5,19 +5,12 @@ class Game < ActiveRecord::Base
 	validates :away_team, :home_team, presence: true, inclusion: { in: Team.all }
 	validate  :we_can_play?
 	validates :scheduled_start_time, presence: true
-<<<<<<< HEAD
     
     def we_can_play?
      	if away_team_id == home_team_id
        	    errors.add(:home_team_id, "must be different from the away team")
-        end
-        true
-=======
-
-  def we_can_play?
-    if away_team_id == home_team_id
-      errors.add(:home_team_id, "must be different from the away team")
->>>>>>> e462c3432a4071e003d06dbd8e6ad4ac26ced4ed
+      end
+      true
     end
-  end
+
 end
