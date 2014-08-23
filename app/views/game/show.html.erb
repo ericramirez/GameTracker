@@ -16,21 +16,21 @@
               <td>Puntuacion</td>
             </tr>
             <tr>
-              <td>50</td>
+              <td>{{ stats.home.score }}</td>
             </tr>
 
             <tr class="head">
               <td>Pases</td>
             </tr>
             <tr>
-              <td>50</td>
+              <td>{{ stats.home.pases }}</td>
             </tr>
 
             <tr class="head">
               <td>Faltas</td>
             </tr>
             <tr>
-              <td>50</td>
+              <td>{{ stats.home.faltas }}</td>
             </tr>
 
           </tbody>
@@ -44,23 +44,13 @@
       </span>
       <div class="plays-box">
         <table>
-          <tr>
-            <td>Gol de <span class="home">Ronaldinho</span></td>
-            <td>38:12</td>
+
+          <tr ng-repeat="play in plays" ng-click="statsTill(play)">
+            <td>{{ play.description }} de <span class="home">{{ play.player.name }}</span> </td>
+            <td>{{ play.time }}</td>
           </tr>
-          <tr>
-            <td>Saque de esquina de <span class="away">Messi</span></td>
-            <td>48:13</td>
-          </tr>
-          <tr>
-            <td>Falta de <span class="away">Sabaleta</span></td>
-            <td>48:26</td>
-          </tr>
-          <tr>
-            <td>Autogol de <span class="home">Michelle</span></td>
-            <td>49:26</td>
-          </tr>
-        </table>
+
+       </table>
       </div>
     </div>
 
