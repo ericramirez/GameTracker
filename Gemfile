@@ -33,6 +33,8 @@ gem 'spring',        group: :development
 # gem 'unicorn'
   gem 'bootstrap-sass'
 
+gem 'angularjs-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

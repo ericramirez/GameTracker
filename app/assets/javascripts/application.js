@@ -10,7 +10,67 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
+//
+//= require angular
 //= require turbolinks
 //= require_tree .
+
+  var statsFromStart = function() 
+  {
+    return {
+      home : {
+        score : 0,
+        pases : 0,
+        faltas : 0
+      },
+      away : {
+        score : 0,
+        pass : 0,
+        faltas : 0
+      }
+    }
+
+  }
+
+
+gametracker = angular.module('gametracker', []);
+
+gametracker.controller('playsController', function($scope) {
+
+  $scope.stats = statsFromStart();
+  
+
+  
+  $scope.plays = [
+
+    { 
+      description: "Gol",
+      player : {
+        name: "Messi"
+      },
+      time : "11:28",
+      score : "HOME",
+    }
+
+  ];
+
+
+  $scope.statsTill = function(play)
+  {
+    var stats = statsFromStart();
+    
+    for ( playKey in $scope.plays )
+    {
+      if ( $scope.plays[playKey].score != 'NULL' )
+      {
+        if ( $scope.plays[playKey].score == 'HOME' )
+          stats.home.score++;
+        else if ( $scope.plays[playKey].score == 'AWAY' )
+          stats.away.score++;
+      }
+    }
+
+    $scope.stats = stats;
+    
+  };
+});
