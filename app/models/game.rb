@@ -1,22 +1,14 @@
 class Game < ActiveRecord::Base
+    belongs_to :away_team, class_name: 'Team', inverse_of: :away_games
+	belongs_to :home_team, class_name: 'Team', inverse_of: :home_games
+
+	validates :away_team, :home_team, presence: true, inclusion: { in: Team.all }
+	validate  :we_can_play?
 	validates :scheduled_start_time, presence: true
-	validates :start_time, presence: false
-	validates :end_time, presence: false
-  	validates :team1, presence: true
-	validates :team2, presence: true
-
-	belongs_to :team1, foreign_key: 'team_id', class_name: 'Team'
-	belongs_to :team2, foreign_key: 'team2_id', class_name: 'Team'
-
-	def plays
-		#Falta la implementacion
-	end
-
-	def save
-		if end_time && start_time
-			return false if end_time < start_time
-		end
-		
-		super
-	end
+    
+    def we_can_play?
+     	if away_team_id == home_team_id
+       	    errors.add(:home_team_id, "must be different from the away team")
+        end
+    end
 end
