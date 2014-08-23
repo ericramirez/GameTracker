@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20140823215806) do
-=======
-ActiveRecord::Schema.define(version: 20140823221327) do
->>>>>>> aed3ae3f11102916cfc0594d6437b3e836be8daa
+ActiveRecord::Schema.define(version: 20140823221302) do
 
   create_table "games", force: true do |t|
     t.integer  "away_team_id"
