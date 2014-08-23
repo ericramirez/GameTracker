@@ -2,18 +2,14 @@
 
 one:
   away_team_id: 1
-  away_team_score: 1
   home_team_id: 1
-  home_team_score: 1
-  scheduled_start_time: 2014-08-23 21:02:51
-  start_time: 2014-08-23 21:02:51
-  end_time: 2014-08-23 21:02:51
+  scheduled_start_time: 2014-08-23 23:45:54
+  start_time: 2014-08-23 23:45:54
+  end_time: 2014-08-23 23:45:54
 
 two:
   away_team_id: 1
-  away_team_score: 1
   home_team_id: 1
-  home_team_score: 1
-  scheduled_start_time: 2014-08-23 21:02:51
-  start_time: 2014-08-23 21:02:51
-  end_time: 2014-08-23 21:02:51
+  scheduled_start_time: 2014-08-23 23:45:54
+  start_time: 2014-08-23 23:45:54
+  end_time: 2014-08-23 23:45:54
