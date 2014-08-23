@@ -10,5 +10,6 @@ class Game < ActiveRecord::Base
      	if away_team_id == home_team_id
        	    errors.add(:home_team_id, "must be different from the away team")
         end
+        true
     end
 end
