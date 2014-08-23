@@ -7,9 +7,9 @@
   <% @games.each do |game| %>
     <%= link_to game_path(game) do %>
       <li>
-      <span class="home"><%= game.team1.name %></span>
+      <span class="home"><%= game.home_team.name %></span>
       <span class="vs">vs</span>
-      <span class="visitor"><%= game.team2.name %></span> - 
+      <span class="visitor"><%= game.away_team.name %></span> - 
       <span class="date"><%= game.scheduled_start_time.to_formatted_s(:short) %></span>
       </li>
     <% end %>
