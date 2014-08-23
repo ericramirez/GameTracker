@@ -2,12 +2,12 @@
 
 one:
   number: 1
-  position: 1
+  position: MyString
   name: MyString
   team_id: 1
 
 two:
   number: 1
-  position: 1
+  position: MyString
   name: MyString
   team_id: 1
