@@ -5,6 +5,6 @@ class Team < ActiveRecord::Base
 	validates :name, presence: true, uniqueness: { case_sensitive: false }
 
 	def name=(value)
-		self[:name] = value.strip.upcase
+		self[:name] = value.strip.upcase!
 	end
 end
