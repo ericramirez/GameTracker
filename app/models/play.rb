@@ -11,4 +11,11 @@ class Play < ActiveRecord::Base
 	validates :game, presence: true, inclusion: { in: Game.all }
 	
 
+	def as_json
+		{ id: id, game: game, player: player, score: score, time: time, description: description }
+	end
+
+	def plays
+		Play.all.map { |x| x.as_json }
+	end
 end

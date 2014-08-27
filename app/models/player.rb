@@ -11,4 +11,5 @@ class Player < ActiveRecord::Base
     def name=(value)
 		self[:name] = value.strip.upcase
     end
+
 end

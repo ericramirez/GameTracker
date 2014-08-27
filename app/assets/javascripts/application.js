@@ -12,7 +12,7 @@
 //
 //
 //= require angular
-//= require turbolinks
+//= require angular-resource
 //= require_tree .
 
   var statsFromStart = function() 
@@ -33,14 +33,19 @@
   }
 
 
-gametracker = angular.module('gametracker', []);
+gametracker = angular.module('gametracker', ['ngResource']);
 
-gametracker.controller('playsController', function($scope) {
+gametracker.controller('playsController', function($scope, $http, $resource) {
+
+  $http.defaults.headers.common['Accept'] = 'application/json';
+
+  var Play = $resource('http://localhost:3000/games/1');
 
   $scope.stats = statsFromStart();
   
 
   
+  /*
   $scope.plays = [
 
     { 
@@ -53,6 +58,10 @@ gametracker.controller('playsController', function($scope) {
     }
 
   ];
+
+  */
+
+  $scope.plays = Play.query();
 
 
   $scope.statsTill = function(play)
