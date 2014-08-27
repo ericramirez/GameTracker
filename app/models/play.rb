@@ -9,5 +9,6 @@ class Play < ActiveRecord::Base
 	validates :score, presence: true, inclusion: {in: @@score}
 	validates :time, presence: true
 	validates :game, presence: true, inclusion: { in: Game.all }
+	
 
 end
