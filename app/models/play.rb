@@ -15,7 +15,7 @@ class Play < ActiveRecord::Base
 		{ id: id, game: game, player: player, score: score, time: time, description: description }
 	end
 
-	def plays
-		Play.all.map { |x| x.as_json }
-	end
+#	def plays
+#		Play.all.map { |x| x.as_json }
+#	end
 end
